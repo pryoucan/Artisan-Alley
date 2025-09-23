@@ -1,9 +1,6 @@
-// backend/controllers/productController.js
-
 import Product from '../models/productModel.js';
 import asyncHandler from 'express-async-handler';
 
-// ... (getProducts and getProductById functions remain the same) ...
 const getProducts = asyncHandler(async (req, res) => {
   const products = await Product.find({});
   res.json(products);
@@ -17,7 +14,6 @@ const getProductById = asyncHandler(async (req, res) => {
   if (product) { res.json(product); } 
   else { res.status(404); throw new Error('Product not found'); }
 });
-// ------------------------------------------------------------------
 
 const createProduct = asyncHandler(async (req, res) => {
   const { name, price, description, image, category, bargainingEnabled } = req.body;
@@ -34,7 +30,7 @@ const createProduct = asyncHandler(async (req, res) => {
     image,
     category,
     bargainingEnabled,
-    user: req.user.id, // This links the product to the logged-in user
+    user: req.user.id,
   });
 
   const createdProduct = await product.save();

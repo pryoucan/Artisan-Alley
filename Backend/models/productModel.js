@@ -1,5 +1,3 @@
-// backend/models/productModel.js
-
 import mongoose from 'mongoose';
 
 const productSchema = mongoose.Schema({
