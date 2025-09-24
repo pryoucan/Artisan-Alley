@@ -1,5 +1,3 @@
-# Artisan Alley - Backend
-
 Artisan Alley is a backend service for a marketplace platform where artisans can showcase and sell handmade products.  
 This repository contains the RESTful API built with **Node.js**, **Express**, and **MongoDB**, featuring authentication, product management, and role-based access for buyers and sellers.
 
